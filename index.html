@@ -152,7 +152,7 @@
 		                    
 		                </div>
 		                
-		            </section><a id="subscribebar1" class="in-page-link" data-scroll-id="subscribe-bar-1"></a>
+		           </section><a id="" class="in-page-link" data-scroll-id="subscribe-bar-1"></a>
 			
 			<section class="subscribe subscribe-1 bg--white">
 		                <div class="container">
@@ -163,14 +163,21 @@
 		                            </div>
 		                        </div>
 		                        <div class="col-sm-6">
-		                  <form action="https://formspree.io/luke@leanlychee.com"
-      method="POST">
-    <input type="email" name="_replyto">
-</form>
+		                            <form class="form--merge form--no-labels" action="https://formspree.io/luke@leanlychee.com"
+      							method="POST" id="subForm" data-error="Please fill all fields correctly." data-success="Thanks for signing up! Please check your inbox for confirmation email.">
 		                                
-		                           
-		                        
+		                                    <label for="fieldEmail"> </label>
+		                                    <br>
+		                                    <input class="col-md-8 col-sm-6 validate-required validate-email" id="fieldEmail" name="cm-kieth-kieth" type="email" required="" placeholder="enter.your@email.co">
+		                               
+		                                <p>
+		                                    <button type="submit" class="col-md-4 col-sm-6">Subscribe</button>
+		                                </p>
+		                            </form>
+		                        </div>
 		                    </div>
+		                    
+		                </div>
 		                    
 		             
 		                
