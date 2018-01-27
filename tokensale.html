@@ -96,7 +96,7 @@
 		<div class="main-container">
 					
 		
-		<section class="slider slider--animate height-100 cover cover-5 parallax" data-arrows="true" data-paging="true" data-timing="12000">
+		<section class="animate height-100 cover cover-5 parallax" data-arrows="true" data-paging="true" data-timing="12000">
 		                <ul class="slides">
 		                    <li class="imagebg" data-overlay="6">
 		                        <div class="background-image-holder">
@@ -135,33 +135,8 @@
 		                </ul>   
 	    -->
 	    		
-					  <script src="/js/flipclock.min.js"></script>
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+				
 					
-					<div class="clock" style="margin:2em;"></div>
-	<div class="message"></div>
-
-	<script type="text/javascript">
-		var clock;
-		
-		$(document).ready(function() {
-			var clock;
-
-			clock = $('.clock').FlipClock({
-		        clockFace: 'DailyCounter',
-		        autoStart: false,
-		        callbacks: {
-		        	stop: function() {
-		        		$('.message').html('The clock has stopped!')
-		        	}
-		        }
-		    });
-				    
-		    clock.setTime(212065);
-		    clock.setCountdown(true);
-		    clock.start();
-
-		});
 	</script>
 		            </section>
 	
@@ -202,6 +177,31 @@
 		                                        <h5>— Anthony McCabe, Talent @GoCardless </h5>
 		                                    </div>
 		                                </li>
+								
+								<div class="message"></div>
+
+	<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(212065);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
 						</section>
 			<section>
 		                <div class="container">
