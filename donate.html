@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="donation.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<a href="https://www.rblock.co">
+<img id ="logo" src="../src/logo.png" alt="R_Block" height="30" style="margin: 10px 0px 0px 10px">
+</a>
+
+</head>
+
+<body>
+
+
+
+ 
+ <div class="outer">
+  <div class="middle">
+    <div class="inner">
+
+
+
+ <div id="donate">
+      <h1>Donate.ETH</h1>
+
+     <div id="donate-form">
+             
+               <div>
+                 <select id="charity">
+               <option value="0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8">Choose Charity</option>
+               <option value="0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8">Code To Inspire</option>
+          
+                </select>
+               </div>
+  
+               <div>
+                 <label></label>
+                 <input type="text" id ="amount" placeholder="Amount (ETH)"/>
+               </div>
+
+               <div>
+                 <input type="submit" id="submit-form" onclick="Donate()" value="">
+               </div>
+
+     </div>
+
+     <div id="disclaimer"> *This dApp is till in testing. Please take care.</div>
+     <div id="count">Total Donations: </div>
+
+</div>
+
+   </div>
+  </div>
+</div> 
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="donation.js"></script>
+<script src="jquery.serialize-object.min.js"></script>
+
+</body>
+</html>
