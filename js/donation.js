@@ -56,7 +56,7 @@ if (typeof web3 !== 'undefined') {
 } else { // Else, if there's no web3, ask user to get web3 (Iphone/android/desktop each get a different message)
 
 
-        if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+        if(window.innerWidth <= 800 && window.innerHeight <= 600) { //if mobile, check if iphone
         document.getElementById("submit-form").value = "Install Toshi*";
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -69,7 +69,7 @@ if (typeof web3 !== 'undefined') {
             }
   
         } 
-        else {
+        else { //if not mobile, assume desktop 
         document.getElementById("submit-form").value = "Install MetaMask*";
         document.getElementById('submit-form').setAttribute('onclick','window.open("https://metamask.io/")');
         document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider in order to use Donate.eth";
@@ -113,7 +113,7 @@ else {
 //////////////////////////Donation Count//////////// 
 
 
-function GetCount(theURL) {
+function GetCount(theURL) { //prefix "theURL" determines whether mainnet or testnet api used 
     
    //var xhttp = new XMLHttpRequest();
     var charity = document.getElementById("charity").value;
