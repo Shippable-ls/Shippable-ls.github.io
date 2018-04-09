@@ -1,7 +1,7 @@
 
 var counter = 0; // Donation counter
 GetCount("https://api.etherscan.io/"); //Get donation count
-var network = "Mainnet"; // 
+var network = "Mainnet"; //assume Mainnet until network ID checked
 
 ////////CHECK IF WEB3//////
 
