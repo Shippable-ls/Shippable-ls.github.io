@@ -98,7 +98,8 @@ else {
     if (!err) //if TX submitted, increment donation counter
     setTimeout(function(){ 
       var newcounter = +counter + +amount;
-      document.getElementById("count").innerHTML = "Total Donations: " + round(newcounter,5) + " ETH " + network;
+      var rounded = round(newcounter,5);
+      document.getElementById("count").innerHTML = "Total Donations: " + rounded + " ETH " + network;
     }, 1000);
     
 
