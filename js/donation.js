@@ -7,18 +7,18 @@ var network = "Mainnet"; //assume Mainnet until network ID checked
 
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
-  //If there's web3, make sure it's not locked
+  //If there's web3, check if it's locked
   web3.eth.getAccounts(function(error, accounts) {
     if (error) {
     console.log(error);
     }
     else {
-      if (accounts.length == 0){
-      document.getElementById("submit-form").value = "Your MetaMask is locked*"
-      document.getElementById("disclaimer").innerHTML = "*Please unlock Metamask in order to donate";
+      if (accounts.length == 0){ //If it's locked
+      document.getElementById("submit-form").value = "Your Web3 is locked*"
+      document.getElementById("disclaimer").innerHTML = "*Please unlock in order to donate";
       }
-      else {
-        web3.version.getNetwork(function(err, netId) { //If web3 & unlocked, check if testnet or mainnet
+      else { //If web3 & unlocked, check if testnet or mainnet
+        web3.version.getNetwork(function(err, netId) { 
   switch (netId) {
     case "1":
       document.getElementById("submit-form").value = "Donate*";
@@ -116,10 +116,9 @@ else {
 
 function GetCount(theURL) { //prefix "theURL" determines whether mainnet or testnet api used 
     
-   //var xhttp = new XMLHttpRequest();
+
     var charity = document.getElementById("charity").value;
     var url =  theURL + "api?module=account&action=balance&address=" + charity + "&tag=latest&apikey=K8BKKCIBTPMY9DT8RIXETN3VWHNE2DAGH7";
-   // httpGetAsync(url);
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
     	if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
