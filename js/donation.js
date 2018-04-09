@@ -1,24 +1,24 @@
 
-var counter = 0; // init donation counter
+var counter = 0; // Donation counter
 GetCount("https://api.etherscan.io/"); //Get donation count
-var network = "Mainnet"; //assume Mainnet until network ID checked
+var network = "Mainnet"; // 
 
 ////////CHECK IF WEB3//////
 
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
-  //If there's web3, check if it's locked
+  //If there's web3, make sure it's not locked
   web3.eth.getAccounts(function(error, accounts) {
     if (error) {
     console.log(error);
     }
     else {
-      if (accounts.length == 0){ //If it's locked
-      document.getElementById("submit-form").value = "Your Web3 is locked*"
-      document.getElementById("disclaimer").innerHTML = "*Please unlock in order to donate";
+      if (accounts.length == 0){
+      document.getElementById("submit-form").value = "Your MetaMask is locked*"
+      document.getElementById("disclaimer").innerHTML = "*Please unlock Metamask in order to donate";
       }
-      else { //If web3 & unlocked, check if testnet or mainnet
-        web3.version.getNetwork(function(err, netId) { 
+      else {
+        web3.version.getNetwork(function(err, netId) { //check if testnet or mainnet
   switch (netId) {
     case "1":
       document.getElementById("submit-form").value = "Donate*";
@@ -56,7 +56,7 @@ if (typeof web3 !== 'undefined') {
 } else { // Else, if there's no web3, ask user to get web3 (Iphone/android/desktop each get a different message)
 
 
-        if(window.innerWidth <= 800 && window.innerHeight <= 600) { //if mobile, check if iphone
+        if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         document.getElementById("submit-form").value = "Install Toshi*";
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -69,7 +69,7 @@ if (typeof web3 !== 'undefined') {
             }
   
         } 
-        else { //if not mobile, assume desktop 
+        else {
         document.getElementById("submit-form").value = "Install MetaMask*";
         document.getElementById('submit-form').setAttribute('onclick','window.open("https://metamask.io/")');
         document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider in order to use Donate.eth";
@@ -98,8 +98,7 @@ else {
     if (!err) //if TX submitted, increment donation counter
     setTimeout(function(){ 
       var newcounter = +counter + +amount;
-      var rounded = round(newcounter,5);
-      document.getElementById("count").innerHTML = "Total Donations: " + rounded + " ETH " + network;
+      document.getElementById("count").innerHTML = "Total Donations: " + round(newcounter,5) + " ETH " + network;
     }, 1000);
     
 
@@ -114,11 +113,12 @@ else {
 //////////////////////////Donation Count//////////// 
 
 
-function GetCount(theURL) { //prefix "theURL" determines whether mainnet or testnet api used 
+function GetCount(theURL) {
     
-
+   //var xhttp = new XMLHttpRequest();
     var charity = document.getElementById("charity").value;
     var url =  theURL + "api?module=account&action=balance&address=" + charity + "&tag=latest&apikey=K8BKKCIBTPMY9DT8RIXETN3VWHNE2DAGH7";
+   // httpGetAsync(url);
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
     	if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
