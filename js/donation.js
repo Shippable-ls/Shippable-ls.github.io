@@ -1,5 +1,5 @@
 
-var counter = 0; // Donation counter
+var counter = 0; // init donation counter
 GetCount("https://api.etherscan.io/"); //Get donation count
 var network = "Mainnet"; //assume Mainnet until network ID checked
 
