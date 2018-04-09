@@ -18,7 +18,7 @@ if (typeof web3 !== 'undefined') {
       document.getElementById("disclaimer").innerHTML = "*Please unlock Metamask in order to donate";
       }
       else {
-        web3.version.getNetwork(function(err, netId) { //check if testnet or mainnet
+        web3.version.getNetwork(function(err, netId) { //If web3 & unlocked, check if testnet or mainnet
   switch (netId) {
     case "1":
       document.getElementById("submit-form").value = "Donate*";
