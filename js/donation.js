@@ -115,15 +115,15 @@ else {
 
 function GetCount(theURL) {
     
-   //var xhttp = new XMLHttpRequest();
     var charity = document.getElementById("charity").value;
     var url =  theURL + "api?module=account&action=balance&address=" + charity + "&tag=latest&apikey=K8BKKCIBTPMY9DT8RIXETN3VWHNE2DAGH7";
-   // httpGetAsync(url);
+    console.log(url);
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
     	if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         document.getElementById("count").innerHTML = "Total Donations: " + round(WeiToEth(JSON.parse(xmlHttp.responseText).result),5) + " ETH " + network;
         counter = round(WeiToEth(JSON.parse(xmlHttp.responseText).result),5);
+        console.log(counter);
         }
     }
     xmlHttp.open("GET", url, true); // true for asynchronous 
