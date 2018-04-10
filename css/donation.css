@@ -109,6 +109,7 @@ select:hover {
   height: 50px;
   padding: 0px 15px 0px 15px;
   margin: 10px 0px 0px 0px;
+  font-style: italic;
 }
 
 #logo { 
@@ -123,4 +124,20 @@ text-rendering: optimizeLegibility;
 -webkit-appearance: none; 
 appearance: none;
 }
+
+a {
+    color: #42b4bb;
+}
+
+#Info{
+  font-family: "Open Sans";
+  font-size: 16px;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+}
+
+#count{
+  font-size: 12px;
+}
+
 
