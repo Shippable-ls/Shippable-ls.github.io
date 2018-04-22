@@ -14,36 +14,29 @@ if (typeof web3 !== 'undefined') {
     }
     else {
       if (accounts.length == 0){
-      document.getElementById("submit-form").value = "Your MetaMask is locked*"
       document.getElementById("disclaimer").innerHTML = "*Please unlock Metamask in order to donate";
       }
       else {
         web3.version.getNetwork(function(err, netId) { //check if testnet or mainnet
   switch (netId) {
     case "1":
-      document.getElementById("submit-form").value = "Donate*";
-      document.getElementById("disclaimer").innerHTML = "*WARNING: You're connected to Mainnet.";
+      document.getElementById("disclaimer").innerHTML = "*You're connected to Mainnet.";
       break
     case "2":
-      document.getElementById("submit-form").value = "Donate*";
       document.getElementById("disclaimer").innerHTML = "*You're connected to a testnet.";
       break
     case "3":
-      document.getElementById("submit-form").value = "Donate*";
       document.getElementById("disclaimer").innerHTML = "*You're connected to Ropsten.";
       network = "Ropsten";
       GetCount("https://api-ropsten.etherscan.io/");
       break
     case "4":
-      document.getElementById("submit-form").value = "Donate*";
       document.getElementById("disclaimer").innerHTML = "*You're connected to a testnet.";
       break
     case "42":
-      document.getElementById("submit-form").value = "Donate*";
       document.getElementById("disclaimer").innerHTML = "*You're connected to a testnet.";
       break
     default:
-      document.getElementById("submit-form").value = "Donate*";
       document.getElementById("disclaimer").innerHTML = "*You're connected to a testnet.";
   }
 })
@@ -57,22 +50,22 @@ if (typeof web3 !== 'undefined') {
 
 
         if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-        document.getElementById("submit-form").value = "Install Toshi*";
+        document.getElementById("submit").innerHTML = "Get Toshi*";
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            document.getElementById('submit-form').setAttribute('onclick','window.open("https://itunes.apple.com/us/app/toshi-ethereum/id1278383455?mt=8")');
-            document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider in order to use Donate.eth";
+            document.getElementById('submit').setAttribute('onclick','window.open("https://itunes.apple.com/us/app/toshi-ethereum/id1278383455?mt=8")');
+            document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider to use donate.eth";
             }  
             else {
-            document.getElementById('submit-form').setAttribute('onclick','window.open("https://play.google.com/store/apps/details?id=org.toshi&hl=en")');
-            document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider in order to use Donate.eth";
+            document.getElementById('submit').setAttribute('onclick','window.open("https://play.google.com/store/apps/details?id=org.toshi&hl=en")');
+            document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider to use donate.eth";
             }
   
         } 
         else {
-        document.getElementById("submit-form").value = "Install MetaMask*";
-        document.getElementById('submit-form').setAttribute('onclick','window.open("https://metamask.io/")');
-        document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider in order to use Donate.eth";
+        document.getElementById("submit").innerHTML = "Get MetaMask*";
+        document.getElementById('submit').setAttribute('onclick','window.open("https://metamask.io/")');
+        document.getElementById("disclaimer").innerHTML = "*You'll need a Web3 provider to use donate.eth";
         }
   
    }
@@ -93,13 +86,15 @@ else {
    
   var account = accounts[0];
   var amount = document.getElementById("amount").value;
-  var charity = document.getElementById("charity").value;
+  var charity = "0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8";
   web3.eth.sendTransaction({from: account, to: charity, value:web3.toWei(amount, "ether"), gasPrice: web3.toWei(5,'gwei')}, function(err, transactionHash){
-    if (!err) //if TX submitted, increment donation counter
+    if (!err) //if TX submitted, the following function increments the donation counter artificially to give the user instant feedback – despite the fact that the TX may still fail. 
+    	//Please consider carefully whether or not to implement this feature. 
+    document.getElementById("disclaimer").innerHTML = "Thanks for your donation. TX hash: " + transactionHash.substring(0,8) + "...";
     setTimeout(function(){ 
       var newcounter = +counter + +amount;
       document.getElementById("count").innerHTML = "Total Donations: " + round(newcounter,5) + " ETH " + network;
-    }, 1000);
+    }, 3000);
     
 
   });
@@ -115,7 +110,8 @@ else {
 
 function GetCount(theURL) {
     
-    var charity = document.getElementById("charity").value;
+  
+    var charity = "0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8";
     var url =  theURL + "api?module=account&action=balance&address=" + charity + "&tag=latest&apikey=K8BKKCIBTPMY9DT8RIXETN3VWHNE2DAGH7";
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
