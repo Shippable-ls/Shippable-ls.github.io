@@ -1,67 +1,43 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/donation.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <a href="https://www.rblock.co">
-<img id ="logo" src="img/logo.png" alt="R_Block" height="30" style="margin: 10px 0px 0px 10px">
+<img id ="logo" src="../src/logo.png" alt="R_Block" height="30" style="margin: 10px 0px 0px 10px">
 </a>
 
 </head>
 
 <body>
 
-
-
- 
- <div class="outer">
+<div class="outer">
   <div class="middle">
     <div class="inner">
 
  <div id="donate">
+
       <h1>Donate.eth</h1>
+      <div id="info">  <a href="http://codetoinspire.org/donate/">Code To Inspire</a> is a nonprofit committed to teaching female students in Afghanistan how to code. </div>
+      <img id ="photo" src="../src/cti.png" alt="R_Block">
+      <div id="info"> You can donate ETH by using the mini-dApp below. For security please check the address <a href="https://etherscan.io/address/0xf30b6efd7b77ad91c2a9d12fdb4dfe38dbc506f8">(0xF3...8)</a> with source website. </div>
 
-     <div id="donate-form">
-             
-               <div>
-                 <select id="charity">
-               <option value="0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8">Choose Charity</option>
-               <option value="0xF30B6Efd7B77Ad91C2a9D12fdb4dfE38dbc506f8">Code To Inspire</option>
-                   <!-- there's only one charity for now --> 
-          
-                </select>
-               </div>
-  
-               <div>
-                 <label></label>
-                 <input type="text" id ="amount" placeholder="Amount (ETH)"/>
-               </div>
+      <div id="donate-form">
+      <input type="text" id ="amount" placeholder="Amount (ETH)"/>
+      <button id="submit" onclick="Donate()">Donate</button>
+      </div>
 
-               <div>
-                 <input type="submit" id="submit-form" onclick="Donate()" value="Donate*">
-               </div>
-
-     </div>
-
-     <div id="disclaimer"> &nbsp; </div>
-    
-     <div id="info">  <a href="http://codetoinspire.org/donate/">Code To Inspire</a> is a nonprofit committed to teaching female students in Afghanistan how to code. </div>
-
-     <div id="count"> &nbsp; </div>
-
+      <div id="disclaimer"> &nbsp; </div>
+      <div id="count"> &nbsp; </div>
+</div>
 </div>
 
- </div>
-<div id="bancor-wc"></div> 
-  </div>
+ <div id="bancor-wc"></div> 
+</div>
 </div> 
 
-
-
-
-
-<script src="https://widget-convert.bancor.network/v1"></script>
+ <script src="https://widget-convert.bancor.network/v1"></script>
 <script>
 BancorConvertWidget.init({
     "type": "1",
@@ -70,14 +46,9 @@ BancorConvertWidget.init({
     "primaryColor": "#000000",
     "primaryColorHover": "#000000"
 });
-</script>
-
-
-
-
-
+</script> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/donation.js"></script>
+<script src="./script.js"></script> 
 
 </body>
 </html>
