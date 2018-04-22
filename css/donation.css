@@ -2,89 +2,45 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400);
 
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #ffffff;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #ffffff;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #ffffff;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #ffffff;
-}
-
 body {
   font-family: 'Open Sans';
-  background: #f4f4f4;
-  color: #000000;
-}
-
-header {
-  position: relative;
-  font-size: 2.3em;
-  text-align: center;
-  letter-spacing: 7px;
-}
-
-
-#donate-form {
-  position: relative;
-  width: 100%;
-}
-
-
-
-select {
-  font-family: "Open Sans";
-  font-size: 16px;
-  width: 100%;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  margin: 10px 0px 0px 0px;
   background: #4020b5;
-  outline: none;
   color: #ffffff;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
- 
+}
 
+h1 {
+	background:#ffffff;
+	color: #4020b5;
+	padding:10px;
+  text-align:left;
+}
+
+
+button, input {
+  font-family: "Open Sans";
+  color: #000000;
+  background:#ffffff;
+  font-size: 16px;
+  height:40px;
+  min-width:140px;
+  margin:none;
+  border:none;
 }
 
 input {
-  font-family: "Open Sans";
-  font-size: 16px;
-  width: 100%;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  margin: 10px 0px 0px 0px;
-  background: #4020b5;
-  outline: none;
-  color: #ffffff;
-  border: none;
-  border-radius: 7px;
-
- 
+	padding:0px 0px 0px 10px;
 }
 
-
-input:hover {
-  background: #42b4bb;
-}
-select:hover {
-  background: #42b4bb;
+button {
+	padding: none;
+	border-radius: 30px
 }
 
-#submit-form {
-  cursor: pointer;
-}
 
 .outer {
     display: table;
     position: absolute;
-    height: 90%;
+    height: 100%;
     width: 99%;
 }
 
@@ -97,53 +53,60 @@ select:hover {
 .inner {
     margin-left: auto;
     margin-right: auto;
-    margin-top:30px;
+    margin-top:100px;
     width: 85%;
-    max-width: 500px; /*whatever width you want*/
-
+    max-width: 500px; 
+    text-align:center;
 }
 
 #disclaimer{
   font-family: "Open Sans";
-  font-size: 16px;
-  width: 100%;
-  height: 50px;
+  font-size: 20px;
+  color:#42b4bb;
   padding: 0px 15px 0px 15px;
-  margin: 10px 0px 0px 0px;
   font-style: italic;
 }
 
-#logo { 
-}
 
 *{
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-shadow:none;
 text-rendering: optimizeLegibility;
--moz-appearance: none; 
--webkit-appearance: none; 
-appearance: none;
+margin: 10px 0px 10px 0px;
+overflow-wrap: break-word;
+word-wrap: break-word;
 }
 
 a {
-    color: #42b4bb;
+    color: #ffffff;
 }
 
 #info{
   font-family: "Open Sans";
   font-size: 16px;
   width: 100%;
-  margin: 0px 0px 10px 0px;
+  padding: 0px 10px 0px 10px;
+  text-align:left;
 }
 
 #count{
-  font-size: 12px;
+  font-size: 16px;
+  padding: 0px 10px 0px 10px;
+
 }
+
+#photo {
+  width:90%;
+  max-width:300px;
+
+}
+
+
 
 #bancor-wc {
-  margin: 30px 0px 0px 0px;
-  background:#ffffff;
+  margin-top: 30px;
+  background: #ffffff;
+  opacity:1;
 }
-
 
