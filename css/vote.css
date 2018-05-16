@@ -1,0 +1,75 @@
+
+#web3reminder {
+  margin-top: 50px;
+  margin-bottom:50px;
+  font-size: 16px;
+}
+
+#chart{
+  position:relative;
+  width:400px;
+  height:200px;
+}
+
+
+.bar{
+
+  position:absolute;
+  bottom:0;
+  display:inline-block;
+  background: #4020b5;
+  border-bottom: 1px solid #13266c;
+  box-shadow: 1px -1px #13266c, 2px -2px #13266c, 3px -3px #13266c,   4px -4px #13266c, 5px -5px #13266c, 6px -6px #13266c, 7px -7px   #13266c, 8px -8px #13266c, 9px -9px #13266c, 10px -10px #13266c;
+}
+
+/* .bar:hover {
+
+background: #ff66cc;
+box-shadow: 1px -1px #b30077, 2px -2px #b30077, 3px -3px #b30077,   4px -4px #b30077, 5px -5px #b30077, 6px -6px #b30077, 7px -7px   #b30077, 8px -8px #b30077, 9px -9px #b30077, 10px -10px #b30077;
+
+} */
+
+
+.wrapper{
+  text-align:center;
+  margin:0 auto;
+  margin-top:0px;
+  margin-bottom:30px;
+  width:400px;
+  font-family:Helvetica;
+  font-size:12px;
+
+}
+.wrapper > h1, .wrapper > p{
+  margin:0;
+}
+
+
+#justifiedcontainer {
+
+    height: 30px;
+    margin-left:15px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+
+    /* just for demo */
+    width: 400px;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+
+
+* {
+  margin-top:10px;
+
+-moz-osx-font-smoothing: grayscale;
+text-shadow:none;
+text-rendering: optimizeLegibility;
+
+}
