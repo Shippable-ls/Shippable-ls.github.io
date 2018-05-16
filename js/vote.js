@@ -4,7 +4,8 @@
 if (typeof web3 !== 'undefined') {
   web3Provider = web3.currentProvider;
  } else {
-   document.getElementById("web3reminder").innerHTML = "You'll need Metamask in order to vote"
+   document.getElementById("justifiedcontainer").style.display = "none";
+   document.getElementById("web3reminder").innerHTML = "You'll need Metamask in order to vote."
   // If no injected web3 instance is detected, fall back to Infura
    web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/Njt2otjIXgtpcsbCtIhW');
 }
