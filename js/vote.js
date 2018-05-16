@@ -100,4 +100,3 @@ function drawChart(data,selector,padding){
     left += (barwidth+padding+10);
   }
 }
-
