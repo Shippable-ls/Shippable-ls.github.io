@@ -65,11 +65,11 @@ box-shadow: 1px -1px #b30077, 2px -2px #b30077, 3px -3px #b30077,   4px -4px #b3
 }
 
 button {
-    background-color: #4020b5; 
-    color: white;
-    padding: 8px 10px;
-    text-align: center;
-    font-size: 18px;
+    background-color: #4020b5 !important; 
+    color: white !important;
+    padding: 8px 10px !important;
+    text-align: center !important;
+    font-size: 18px !important;
     border-radius: 3px !important;
 }
 
