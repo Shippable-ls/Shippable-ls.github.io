@@ -64,6 +64,18 @@ box-shadow: 1px -1px #b30077, 2px -2px #b30077, 3px -3px #b30077,   4px -4px #b3
     line-height: 0
 }
 
+button {
+    background-color: #4020b5; 
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 
 * {
   margin-top:10px;
