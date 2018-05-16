@@ -76,6 +76,7 @@ button {
     text-align: center !important;
     font-size: 18px !important;
     border-radius: 10px !important;
+    border: none !important;
     width: 100px !important;
 }
 
