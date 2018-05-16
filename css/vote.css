@@ -64,7 +64,7 @@ body {
   margin-top:10px;
   margin-bottom:30px;
   max-width: 400px;
-    width:100%;
+  width:100%;
   font-family:Helvetica;
   font-size:12px;
 
@@ -75,35 +75,19 @@ body {
 }
 
 
-#justifiedcontainer {
+#equal { text-align: justify; -ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines; clear: both; }
 
-    height: 30px;
-    margin-left:15px;
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-
-    /* just for demo */
-    max-width: 400px;
-    width:100%;
-}
-
-.stretch {
-    width: 100%;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0
-}
 
 button {
-    background-color: #f4f4f4 !important;
-    color: #000000;
+    background-color: #4020b5 !important;
+    color: #f4f4f4;
     padding: 8px 10px;
     text-align: center;
     font-size: 18px;
     border-radius: 10px;
-    max-width: 130px;
-    width: 30%;
+    border: none;
+    max-width: 131px;
+    width: 33%;
 }
 
 button:hover {
