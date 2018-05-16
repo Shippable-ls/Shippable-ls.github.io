@@ -79,13 +79,14 @@ body {
 
 
 button {
-    background-color: #4020b5 !important;
-    color: #f4f4f4;
+    background-color: #000000 !important;
+    color:#f4f4f4;
     padding: 8px 10px;
     text-align: center;
+    border-color: #f4f4f4;
+    border: solid 1px;
     font-size: 18px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 20px;
     max-width: 131px;
     width: 32%;
 }
