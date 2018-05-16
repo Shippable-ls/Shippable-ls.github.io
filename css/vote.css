@@ -71,7 +71,8 @@ button {
     padding: 8px 10px !important;
     text-align: center !important;
     font-size: 18px !important;
-    border-radius: 3px !important;
+    border-radius: 10px !important;
+    width: 100px !important;
 }
 
 button:hover {
