@@ -70,6 +70,7 @@ button {
     padding: 8px 10px;
     text-align: center;
     font-size: 18px;
+    border-radius: 3px !important;
 }
 
 button:hover {
