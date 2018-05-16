@@ -45,7 +45,7 @@ web3.eth.getAccounts(function(error, accounts) {
      contractInstance.totalVotesFor.call('Rocketchat', {from: account}, function(error, result) {
      var bar7 = result;
      var values = [bar1,bar2,bar3];
-     drawChart(values,"#chart",10);
+     drawChart(values,"#chart",1);
   });
   });
   });
