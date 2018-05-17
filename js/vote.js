@@ -5,7 +5,7 @@ if (typeof web3 !== 'undefined') {
   web3Provider = web3.currentProvider;
  } else {
    document.getElementById("justifiedcontainer").style.display = "none";
-   document.getElementById("web3reminder").innerHTML = "You'll need Metamask in order to vote."
+   document.getElementById("web3reminder").innerHTML = "You'll need Metamask connected to Ropsten in order to see the results."
   // If no injected web3 instance is detected, fall back to Infura
    web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/Njt2otjIXgtpcsbCtIhW');
 }
@@ -45,6 +45,8 @@ web3.eth.getAccounts(function(error, accounts) {
      contractInstance.totalVotesFor.call('Rocketchat', {from: account}, function(error, result) {
      var bar7 = result;
      var values = [bar1,bar2,bar3];
+     var totalvotes = +bar1 + +bar2 + +bar3;
+     document.getElementById("votecounter").innerHTML = "Vote count: " + totalvotes;
      drawChart(values,"#chart",1);
   });
   });
