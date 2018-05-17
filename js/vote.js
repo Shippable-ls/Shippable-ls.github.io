@@ -5,7 +5,7 @@ if (typeof web3 !== 'undefined') {
   web3Provider = web3.currentProvider;
  } else {
    document.getElementById("justifiedcontainer").style.display = "none";
-   document.getElementById("web3reminder").innerHTML = "You'll need Metamask connected to Ropsten in order to see the results."
+   document.getElementById("web3reminder").innerHTML = "You'll need Metamask installed and connected to Ropsten."
   // If no injected web3 instance is detected, fall back to Infura
    web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/Njt2otjIXgtpcsbCtIhW');
 }
