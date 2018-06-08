@@ -75,22 +75,22 @@ var values = [];
 
 
 
-// // Vote function
+// Vote function
 
-// function vote(candidate) {
+function vote(candidate) {
 
-//   web3.eth.getAccounts(function(error, accounts) {
-//   if (error) {
-//     console.log(error);
-//   }
-// var account = accounts[0];
-// contractInstance.voteForCandidate(candidate, {from: account}, {gas: "30000"}, {gasPrice: web3.toWei(5,'gwei')}, function(error,value) {
-//   if (!error) {
-//     document.getElementById("web3reminder").innerHTML = "Thanks for voting! Your vote is being counted."
-//   }
-//   });
-// });
-// }
+  web3.eth.getAccounts(function(error, accounts) {
+  if (error) {
+    console.log(error);
+  }
+var account = accounts[0];
+contractInstance.voteForCandidate(candidate, {from: account}, {gas: "30000"}, {gasPrice: web3.toWei(5,'gwei')}, function(error,value) {
+  if (!error) {
+    document.getElementById("web3reminder").innerHTML = "Thanks for voting! Your vote is being counted."
+  }
+  });
+});
+}
 
 
 ////////////////////////////
